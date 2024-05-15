@@ -10,6 +10,8 @@ class Quadrillage{
     bool checkGagneVertical();
     bool checkGagneHorizon();
     void removeQuadrillage(int x,int y);
+    bool checkGagneDiagoBottomLeft();
+    bool checkGagneDiagoBottomRigth();
     //bool checkGagne();
     
 };

@@ -67,6 +67,12 @@ void loop() {
       if(quadri->checkGagneVertical()==true){
         GameOver = true;
       }
+      if(quadri->checkGagneDiagoBottomLeft()==true){
+        GameOver = true;
+      }
+      if(quadri->checkGagneDiagoBottomRigth()==true){
+        GameOver = true;
+      }
     }
   }
   else{

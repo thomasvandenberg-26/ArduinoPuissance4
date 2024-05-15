@@ -17,6 +17,7 @@ void Quadrillage::iniQuadrillage(int x,int y){
       plateau[i][j] = new Carre(caseX, caseY, tailleCase, tailleCase);
     }
   }
+   //plateau[5][0]->setColors(gb.createColor(0,255,0));
 }
 void Quadrillage::removeQuadrillage(int x,int y){
   this->iniQuadrillage(x,y);
@@ -36,6 +37,35 @@ bool Quadrillage::checkGagneHorizon(){
   return bol;
 }
 
+bool Quadrillage::checkGagneDiagoBottomLeft(){
+ bool bol = false;
+  for(int i=5;i>=0;i--){
+    for(int j=0;j<4;j++){
+      if(plateau[i][j]->getColors()==plateau[i-1][j+1]->getColors()&& plateau[i][j]->getColors()==plateau[i-2][j+2]->getColors() &&   plateau[i][j]->getColors()==plateau[i-3][j+3]->getColors()
+      && plateau[i][j]->getPositions()==true && plateau[i-1][j+1]->getPositions()==true && plateau[i-2][j+2]->getPositions()==true && plateau[i-3][j+3]->getPositions()==true
+      ){
+        bol = true;
+      }
+    }
+  }
+  
+  return bol;
+}
+
+bool Quadrillage::checkGagneDiagoBottomRigth(){
+ bool bol = false;
+  for(int i=5;i>=0;i--){
+    for(int j=6;j>=0;j--){
+      if(plateau[i][j]->getColors()==plateau[i-1][j-1]->getColors()&& plateau[i][j]->getColors()==plateau[i-2][j-2]->getColors() &&   plateau[i][j]->getColors()==plateau[i-3][j-3]->getColors()
+      && plateau[i][j]->getPositions()==true && plateau[i-1][j-1]->getPositions()==true && plateau[i-2][j-2]->getPositions()==true && plateau[i-3][j-3]->getPositions()==true
+      ){
+        bol = true;
+      }
+    }
+  }
+  
+  return bol;
+}
 
 bool Quadrillage::checkGagneVertical(){
   bool bol = false;
