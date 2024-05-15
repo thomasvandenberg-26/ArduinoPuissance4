@@ -1,4 +1,5 @@
-carre::carre(int x,int y,int heigh,int widthe){
+#include "carre.h"
+ carre::carre(int x,int y,int heigh,int widthe){
         this->color = gb.createColor(255,255,255);
         this->x = x;
         this->y = y;

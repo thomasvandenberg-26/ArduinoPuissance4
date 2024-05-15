@@ -1,3 +1,8 @@
+#ifndef CARRE_H
+#define CARRE_H
+
+
+#include <Gamebuino-Meta.h> 
 class carre{
   private:
     int x;

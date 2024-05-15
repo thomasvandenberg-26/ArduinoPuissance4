@@ -1,3 +1,9 @@
+#ifndef QUADRILLAGE_H
+#define QUADRILLAGE_H
+
+#include <Gamebuino-Meta.h>
+#include "carre.h"
+
 class Quadrillage{
   private:
     carre *plateau[6][7];
@@ -8,4 +14,4 @@ class Quadrillage{
     bool findCarre(int i,int j);
     bool checkGagne();
     
-};
+

@@ -1,3 +1,4 @@
+#include "Quadrillage.h"
 Quadrillage::Quadrillage(int x,int y){
   const int tailleCase = 7 ;
    // Calculer la position X du coin supérieur gauche du plateau pour le centrer horizontalement

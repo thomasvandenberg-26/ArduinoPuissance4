@@ -25,7 +25,7 @@ void loop(){
   while(!gb.update());
   gb.display.clear();
   Carre->setColors(color);
-  cadri->drawCadriage();
+  quadri->drawquadriage();
    int carreX = plateauX + colonneSelectionnee * 7 + 7 / 2;
     int carreY = plateauY - 10;
    Carre->setX(carreX);
@@ -40,7 +40,7 @@ void loop(){
   }
   if(gb.buttons.released(BUTTON_A)){
     for(int i=0;i<6;i++){
-      if(cadri->findCarre(i,colonneSelectionnee)!=true){
+      if(quadri->findCarre(i,colonneSelectionnee)!=true){
         Carre->setY(Carre->getY()  + 8);
         Carre->draw();
       }
@@ -50,13 +50,13 @@ void loop(){
         break;
       }
     }
-    cadri->findCarre(Carre,color);
+    quadri->findCarre(Carre,color);
     if(color==gb.createColor(0,255,0)){
       color= gb.createColor(255,0,0);
     }else{
       color=gb.createColor(0,255,0);
     }
-    if(cadri->checkGagne()==true){
+    if(quadri->checkGagne()==true){
       gb.display.clear();
     }
   }
