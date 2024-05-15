@@ -13,5 +13,7 @@ class Quadrillage{
     void findCarre(carre *Carre,Color color);
     bool findCarre(int i,int j);
     bool checkGagne();
+
+}
     
 
