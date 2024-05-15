@@ -2,9 +2,9 @@
 #include "Carre.h"
 #include "Quadrillage.h"
 Quadrillage::Quadrillage(int x,int y){
- this->iniCadriage(x,y);
+ this->iniQuadrillage(x,y);
 }
-void Quadrillage::iniCadriage(int x,int y){
+void Quadrillage::iniQuadrillage(int x,int y){
   const int tailleCase = 7 ;
    // Calculer la position X du coin supérieur gauche du plateau pour le centrer horizontalement
   int plateauX = x;
@@ -18,8 +18,8 @@ void Quadrillage::iniCadriage(int x,int y){
     }
   }
 }
-void Quadrillage::removeCadriage(int x,int y){
-  this->iniCadriage(x,y);
+void Quadrillage::removeQuadrillage(int x,int y){
+  this->iniQuadrillage(x,y);
 }
 
 bool Quadrillage::checkGagneHorizon(){
@@ -69,7 +69,7 @@ void Quadrillage::findCarre(Carre *carre,Color color){
     }
   }
 }
-void Quadrillage::drawCadriage(){
+void Quadrillage::drawQuadrillage(){
    for(int i = 0; i < 6; i++) {
     for(int j = 0; j < 7; j++){
       this->plateau[i][j]->draw();
